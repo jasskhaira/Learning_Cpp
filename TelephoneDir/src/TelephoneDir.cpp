@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : Prime.cpp
+// Name        : TelephoneDir.cpp
 // Author      : Jaspreet Singh
 // Version     :
 // Copyright   : Your copyright notice
