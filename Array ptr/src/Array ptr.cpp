@@ -91,13 +91,14 @@ PRINTING LINE IN REVERSE ORDER
 
 	cin.sync();
 	cin.clear();
+
 	cin.get(line2,100);
 	//for(lineptr2 = line2 ;  lineptr2<=line2 +100 &&  cin.get(*lineptr2) && *lineptr2 != '\n'; lineptr2++);
 
 
 
 
-	cout<<str_cmp(line1ptr1,lineptr2);
+	//cout<<str_cmp(line1ptr1,lineptr2);
 	if(str_cmp(line1,line2)==1){
 
 		cout<<"lines are equal";
