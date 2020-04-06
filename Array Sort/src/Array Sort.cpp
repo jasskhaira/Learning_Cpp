@@ -37,7 +37,7 @@ int main() {
 
 void selectionSort(int *arr , int len){
 
-	int temp;
+	int *temp;
 
 	for (int j = 0  ; j <= len ;j++ ){
 
@@ -45,9 +45,9 @@ void selectionSort(int *arr , int len){
 
 			if( *(arr + j) < *(arr + i ))
 			{
-				temp = *(arr + i );
+				*temp = *(arr + i );
 				*(arr + i ) = *(arr + j) ;
-				*(arr + j)  = temp;
+				*(arr + j)  = *temp;
 			}
 		}
 	}

@@ -1,11 +1,16 @@
 LaunchTargetManager/configs/Array\ Sort=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/Array\ ptr=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/Class\ array=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Closing\ a\ file=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/File\ Handeling=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/Printing\ Eniviorment\ variables=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Reading\ writig\ blocks=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Class array,org.eclipse.launchbar.core.descriptorType.default\:Array ptr,org.eclipse.launchbar.core.descriptorType.default\:Array Sort,org.eclipse.launchbar.core.descriptorType.default\:Printing Eniviorment variables
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Array Sort,org.eclipse.launchbar.core.descriptorType.default\:Class array,org.eclipse.launchbar.core.descriptorType.default\:Array ptr,org.eclipse.launchbar.core.descriptorType.default\:Printing Eniviorment variables,org.eclipse.launchbar.core.descriptorType.default\:File Handeling,org.eclipse.launchbar.core.descriptorType.default\:Closing a file,org.eclipse.launchbar.core.descriptorType.default\:Reading writig blocks
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Array\ Sort/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Array\ Sort/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Class\ array/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Class\ array/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
