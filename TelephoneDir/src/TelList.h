@@ -8,6 +8,9 @@
 #ifndef TELLIST_H_
 #define TELLIST_H_
 #include<string>
+#include<iostream>
+#include<iomanip>
+#include<fstream>
 
 using namespace std;
 
@@ -20,17 +23,18 @@ class TelList {
 
 private:
 	Elements v[MAX];
-	int count;
+	int count ;
 
 public:
-	TelList() { count = 0 ;};
-	virtual ~TelList();
+	TelList() { count = 0 ;}
+
+	//~TelList();
 
 	int getcount() const { return count ;}
 
 	Elements *retrive( int i) { return ( i >= 0 && i< count)? &v[i] : NULL; }
 
-	bool append ( const string& name , const string & telNr );
+	bool append ( const string& nm , const string & telNr );
 
 
 	bool append ( const Elements& el);// { return append ( el.name, el.telNr );
@@ -44,6 +48,11 @@ public:
 
 	int print( const string& name);
 	int getNewEntries();
+
+	bool load();
+	bool save();
+	bool saveas();
+
 
 };
 
