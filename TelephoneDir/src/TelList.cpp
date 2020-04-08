@@ -104,11 +104,19 @@ bool TelList::load(){
 
 	char FileName[100];
 	ifstream infile;
+	Elements file;
 	cout<<"\nEnter the absolute path and Name of File ";
-	getline(FileName,100);
+	cin.sync(); cin.clear();
+	cin.getline(FileName,100);
 
-	if(!(infile.open(FileName, ios::app |ios::binary)) );
-		cerr<<"Error Opening in File ";
+	if(!(infile.open(FileName, ios::in |ios::binary)) );
+		cerr<<"Error Opening in File ";	return false;
+	while(true){
+	if(!infile.read((char*)file , sizeof(Elements)))
+		break;
+	else{
+
+	}
 
 }
 
