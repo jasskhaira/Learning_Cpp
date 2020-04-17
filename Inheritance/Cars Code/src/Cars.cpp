@@ -7,7 +7,7 @@
 
 #include "Cars.h"
 
-int Cars::objcnt=0;
+
 
 Cars::Cars(long n  , const string& prod ) {
 

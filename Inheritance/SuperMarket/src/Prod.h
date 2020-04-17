@@ -5,8 +5,8 @@
  *      Author: root
  */
 
-#ifndef PRODUCT_H_
-#define PRODUCT_H_
+#ifndef PROD_H_
+#define PROD_H_
 #include<iostream>
 #include<iomanip>
 #include<string>
@@ -21,16 +21,16 @@ private:
 	string Name;
 
 public:
-	Product( long bc = 0L , string& nm = "");
-	virtual ~Product();
+	Product( long bc = 0L ,const string& nm = "");
+    ~Product();
 
 
 	//Access Metheods
 	void setCode(long code ) { Barcode = code ;}
 	long getCode() const { return Barcode ;}
 
-	void setName( string& name ) { Name = name ;}
-	string& getName () const {  return Name ;}
+	void setName(const string& name ) { Name = name ;}
+	const string& getName () const {  return Name ;}
 
 	void scanner();
 	void printer();
@@ -44,12 +44,12 @@ private:
 
 public:
 
-	PrepackedFood(long code = 0L , string& name = "" , long up = 0L)
-	~PrepackedFood();
+	PrepackedFood(long code = 0L , const string& name = "" , long up = 0L);
+	~PrepackedFood(){};
 
 
 	long getPrice() const { return Unitprice ;}
-	long setPrice( long price ) { Unitprice = price ;}
+	void setPrice( long price ) { Unitprice = price ;}
 
 	void scanner();
 	void printer();
@@ -57,6 +57,8 @@ public:
 
 
 	};
+
+
 class FreshFood: public Product{
 
 private:
@@ -65,8 +67,8 @@ private:
 
 public:
 
-	FreshFood( long cod);
-	~FreshFood();
+	FreshFood( long code = 0L , const string& name = "", long p = 0L , float w = 0);
+	~FreshFood(){};
 	void setWeight( float w ) { weight = w ;}
 	float getWeight()const { return weight; }
 
@@ -76,8 +78,7 @@ public:
 	void scanner();
 	void printer();
 
-
-
 };
+
 
 #endif /* PRODUCT_H_ */

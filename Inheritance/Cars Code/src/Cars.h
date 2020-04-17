@@ -20,7 +20,7 @@ private:
 
 
 public:
-	static int objcnt;
+
 	Cars(long n = 0L , const string& prod = "");
 	virtual ~Cars();
 
