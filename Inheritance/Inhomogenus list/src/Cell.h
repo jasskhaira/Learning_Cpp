@@ -41,7 +41,6 @@ public:
 
 	void display()const ;
 
-
 };
 
 
