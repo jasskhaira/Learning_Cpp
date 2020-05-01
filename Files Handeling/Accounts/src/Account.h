@@ -12,6 +12,7 @@
 #include<iomanip>
 #include<fstream>
 
+
 using namespace std;
 
 enum TypeId { ACCOUNT , DEP_ACC , SAV_ACC};
@@ -37,8 +38,8 @@ public:
 	virtual ostream& write(ostream& os) const;
 	virtual istream& read(istream& is);
 
-	void dispaly();
-	friend virtual ostream& operator <<( ostream& os,const Account& a );
+	virtual void dispaly();
+	friend ostream& operator <<( ostream& os,const Account& a );
 
 	virtual TypeId getTypeId() const { return ACCOUNT ;}
 
@@ -65,10 +66,13 @@ public:
 	double getInt( ) const { return intrest;}
 	float getOdlim() const { return odlim ; }
 
-	//ostream& write(ostream& os) const;
-	//istream& read(istream& is);
+	ostream& write(ostream& os) const;
+	istream& read(istream& is);
+	void dispaly();
 
-	friend ostream& operator <<( ostream& os,const DepAcc& a );
+
+	TypeId getTypeId() const { return DEP_ACC ;}
+
 };
 
 
@@ -88,12 +92,14 @@ public:
 
 	float getInt() const { return intrest ;}
 
-	//ostream& write(ostream& os) const;
-	//istream& read(istream& is);
+	ostream& write(ostream& os) const;
+	istream& read(istream& is);
+	void dispaly();
 
-	friend ostream& operator <<( ostream& os,const SavAcc& a );
+	TypeId getTypeId() const { return SAV_ACC ;}
 
 };
+
 
 
 

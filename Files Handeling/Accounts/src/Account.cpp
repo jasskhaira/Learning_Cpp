@@ -58,12 +58,7 @@ DepAcc::DepAcc(const string& n
 
 DepAcc::~DepAcc(){}
 
-ostream& operator <<(ostream & os , const DepAcc& a){
 
-	os<<"Intrest "<<a.getInt()<<endl;
-	os<<"Overdarft Limit"<<a.getOdlim()<<endl;
-	return os;
-}
 
 
 SavAcc::SavAcc(const string& n
@@ -77,12 +72,59 @@ SavAcc::SavAcc(const string& n
 
 SavAcc::~SavAcc(){}
 
-ostream& operator<<(ostream& os , SavAcc& a){
 
-	os<<"Intrest "<<a.getInt()<<endl;
+void Account::dispaly(){
+
+	cout<<"Name " <<getName()<<endl;
+	cout<<"Acc No "<<getNr()<<endl;
+	cout<<"Get Balance"<<getBalance();
+}
+
+void DepAcc::dispaly(){
+	Account::dispaly();
+	cout<<"Overdraft Limit "<<getOdlim()<<endl;
+	cout<<"Interest "<<getInt()<<endl;
+}
+
+
+ostream& DepAcc::write(ostream& os)const{
+	if(!Account::write(os))
+		return os;
+	os.write((char*)&odlim , sizeof(odlim));
+	os.write((char*)&intrest , sizeof(intrest));
 	return os;
 }
 
+istream& DepAcc::read(istream& is)
+{
+if(!Account::read(is))
+return is;
+is.read((char*)&odlim, sizeof(odlim) );
+is.read((char*)&intrest, sizeof(intrest));
+return is;
+}
+
+
+
+ostream& SavAcc::write(ostream& os)const{
+	if(!Account::write(os))
+		return os;
+	os.write((char*)&intrest , sizeof(intrest));
+	return os;
+}
+
+istream& SavAcc::read(istream& is)
+{
+if(!Account::read(is))
+return is;
+is.read((char*)&intrest, sizeof(intrest));
+return is;
+}
+
+void SavAcc::dispaly(){
+	Account::dispaly();
+	cout<<"Interest "<<getInt()<<endl;
+}
 
 
 
