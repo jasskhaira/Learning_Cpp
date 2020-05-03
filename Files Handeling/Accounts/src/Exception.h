@@ -7,11 +7,41 @@
 
 #ifndef EXCEPTION_H_
 #define EXCEPTION_H_
+#include<iostream>
+#include<string>
 
-class Exception {
+using namespace std;
+
+class FileError {
+
+private:
+	string filename;
+
 public:
-	Exception();
-	virtual ~Exception();
+	FileError( const string& name);
+
+	virtual ~FileError();
+
+};
+
+
+class OpenError: public FileError{
+
+public:
+	OpenError(const string& file):FileError(file){}
+};
+
+class ReadError: public FileError{
+
+public:
+	ReadError(const string& file):FileError(file){}
+};
+
+
+class WriteError: public FileError{
+
+public:
+	WriteError(const string& file):FileError(file){}
 };
 
 #endif /* EXCEPTION_H_ */

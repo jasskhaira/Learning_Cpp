@@ -11,6 +11,7 @@
 #include<string>
 #include<iomanip>
 #include<fstream>
+#include"Exception.h"
 
 
 using namespace std;
@@ -101,9 +102,36 @@ public:
 };
 
 
+class AccFile{
+private:
+	fstream f;
+	string name;
+
+public:
+	AccFile(const string& s) throw(OpenError);
+	~AccFile(){	f.close() ;}
+	long append (Account& acc)throw(WriteError);
+	Account* retrive(long pos) throw(ReadError);
+};
 
 
 
+class IndexFile{
+
+private:
+	fstream index;
+	string name;
+
+public:
+	IndexFile(const string s) throw(OpenError);
+	~IndexFile();
+
+	void insert(long key, long pos) throw(ReadError , WriteError);
+
+	long search(long Key)throw (ReadError);
+	void retrive(IndexEntry& entry, long pos) throw(ReadError);
+
+};
 
 
 

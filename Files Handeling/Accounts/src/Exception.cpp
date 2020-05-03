@@ -7,12 +7,15 @@
 
 #include "Exception.h"
 
-Exception::Exception() {
+
+FileError::FileError(const string& name) {
+
+	filename = name;
 	// TODO Auto-generated constructor stub
 
 }
 
-Exception::~Exception() {
+FileError::~FileError() {
 	// TODO Auto-generated destructor stub
 }
 
