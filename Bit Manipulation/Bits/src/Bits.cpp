@@ -9,7 +9,24 @@
 #include <iostream>
 using namespace std;
 
+#define MASK 0x20
+
+void putBits(unsigned int num){
+
+
+}
+
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	unsigned int a, b ;
+
+	a=12;
+	b = a << 3;
+	cout<<b;
+
+	char c= 'b';
+	c = c| MASK;
+	cout<<c;
+
+
 	return 0;
 }
