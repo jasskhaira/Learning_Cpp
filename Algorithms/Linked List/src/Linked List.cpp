@@ -7,9 +7,23 @@
 //============================================================================
 
 #include <iostream>
+#include"linkList.h"
 using namespace std;
 
+
+linkList Lst;
+
+
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	return 0;
+
+	Lst.addFront("hello");
+	Lst.addFront("bro ");
+	Lst.Display();
+
+	Lst.removeFront();
+	Lst.Display();
+
+
+
+		return 0;
 }
