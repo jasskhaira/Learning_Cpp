@@ -34,7 +34,7 @@ int DLL::addFront(node& nod){
 		return size;
 	}
 
-	node* newnode = new node;
+	node* newnode = new node();
 	newnode = &nod;
 	newnode->next = head;
 	head->prev = newnode;
@@ -48,7 +48,7 @@ int DLL::removeFront(){
 	if(size == 0)
 		return -1;
 
-	node* temp = new node;
+	node* temp = new node();
 
 	temp = head;
 	head = head->next;
@@ -68,7 +68,7 @@ int DLL::addEnd(node& nod){
 			return size;
 		}
 
-	node* newnode = new node;
+	node* newnode = new node();
 	newnode = &nod;
 	newnode->prev = tail;
 	newnode->next=NULL;
@@ -82,7 +82,7 @@ int DLL::removeEnd(){
 	if (size == 0)
 		return -1;
 
-	node* temp = new node;
+	node* temp = new node();
 	temp = tail;
 	tail = tail->prev;
 	tail->next = NULL;
@@ -92,21 +92,17 @@ int DLL::removeEnd(){
 	return size;
 }
 
-ostream& operator<<(ostream& os ,const DLL& nod ){
 
-	if(nod.getSize() == 0)
-		os<<"Empty List";
-	else{
-		node* curr = &nod.getHead();
-		int size = nod.getSize();
-		for(int i = 0 ; i <= size ; i++){
-			os<<curr->getdata();
-			curr = curr->getnext();
-			return os;
-		}
+void DLL::Display(){
 
-	}}
+	node *temp = head;
 
+	do{
+		cout<<temp->data;
+		temp = temp->next;
+	}while(temp->next !=NULL );
+
+}
 
 
 

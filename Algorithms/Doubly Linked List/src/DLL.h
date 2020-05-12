@@ -33,7 +33,7 @@ private:
 
 public:
 	DLL();
-	virtual ~DLL();
+	~DLL();
 
 	int getSize()const { return  size ;}
 
@@ -45,11 +45,12 @@ public:
 
 	int addEnd(node& nod);
 	int removeEnd();
+	void Display();
 
 
 
 
 };
 
-ostream& operator <<(ostream& os , const DLL& nod );
+
 #endif /* DLL_H_ */
