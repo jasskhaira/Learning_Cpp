@@ -19,7 +19,9 @@ Tree::~Tree() {
 }
 
 
-void Tree::insert(node& n){
+void Tree::insert(int& n){
+
+	node *tempnode = new node;
 
 
 }

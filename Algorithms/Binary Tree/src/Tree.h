@@ -15,7 +15,7 @@ using namespace std;
 struct node{
 
 	int data;
-	node *parentPtr , *childPtr;
+	node *j, *childPtr;
 
 
 };
