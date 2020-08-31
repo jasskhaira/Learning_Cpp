@@ -8,18 +8,15 @@
 
 #include <iostream>
 #include<cstdlib>
+#include<opencv4/opencv2/opencv.hpp>
+using namespace cv2;
 using namespace std;
 
-int main() {
 
-	int num= -6 ;
-	for ( int j = 1 ; j <= 8 ; j++){
-	for ( int i = 1 ; i <= abs(8 - num)  ; i ++){
-	cout << "#"<<abs(8 - num);
+int main(int argc, char** argv) {
 
-	}
-	num += 2;
-	cout<<endl;
+	Mat image;
+
 	}
 	return 0;
 }
